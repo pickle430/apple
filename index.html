@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links in navbar + footer link
+      $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 900, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    })
+  </script>
+  <style>
+    .container-padding {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    .carousel-inner img {
+      width: 100%;
+      /* Set width to 100% */
+      height: 700px !important;
+      margin: auto;
+    }
+
+    .navbar {
+      background-color: black;
+      border: none;
+    }
+
+    .navbar a {
+      color: white !important;
+    }
+
+    .navbar-brand {
+      text-indent: -9999999px !important;
+      background-image: url('/img/apple.svg');
+      background-repeat: no-repeat;
+    }
+
+
+    .carousel-caption h3 {
+      color: #000000 !important;
+      font-size: 50px !important;
+    }
+
+    .carousel-indicators>li {
+      color: #000000 !important;
+      border: 1px solid black !important;
+    }
+
+    .carousel-indicators>li.active {
+      color: #000000 !important;
+      background-color: black;
+    }
+
+    .bg1 {
+      background-image: url('img/pic04.jpg') !important;
+      background-size: cover;
+    }
+
+    .bg2 {
+      background-image: url('img/pic05.jpg') !important;
+      background-size: cover;
+    }
+
+    .pc-img {
+      display: block !important;
+    }
+
+    .mobile-img {
+      display: none !important;
+    }
+
+    #pc-footer {
+      display: block !important;
+    }
+
+    #mobile-footer {
+      display: none !important;
+    }
+
+
+
+    @media (max-width: 768px) {
+      .carousel-caption {
+        display: none;
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+      }
+
+      .pc-img {
+        display: none !important;
+      }
+
+      .mobile-img {
+        display: block !important;
+      }
+
+      #pc-footer {
+        display: none !important;
+      }
+
+      #mobile-footer {
+        display: block !important;
+      }
+
+
+
+    }
+  </style>
+</head>
+
+<body id="myPage">
+  <!-- Navigation -------------------------------------------------------------------------------------------->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" data-toggle="collapse" data-target=".navbar-collapse.in" href="#myPage">Logo</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#Store" data-toggle="collapse" data-target=".navbar-collapse.in">Store</a></li>
+          <li><a href="#Loc" data-toggle="collapse" data-target=".navbar-collapse.in">Loc</a></li>
+          <li><a href="#iPad" data-toggle="collapse" data-target=".navbar-collapse.in">iPad</a></li>
+          <li><a href="#iPhone" data-toggle="collapse" data-target=".navbar-collapse.in">iPhone</a></li>
+          <li><a href="#Watch" data-toggle="collapse" data-target=".navbar-collapse.in">Watch</a></li>
+          <li><a href="#TV" data-toggle="collapse" data-target=".navbar-collapse.in">TV</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navigation -->
+  <!-- Carousel -------------------------------------------------------------------------------------------->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img class="pc-img" src="img/pic01.jpg" alt="Mac">
+        <img class="mobile-img" src="img/pic01_mobile.jpg" alt="Mac">
+        <div class="carousel-caption">
+          <h3>Mac</h3>
+          <!-- <p>The atmosphere in New York is lorem ipsum.</p> -->
+        </div>
+      </div>
+
+      <div class="item">
+        <img class="pc-img" src="img/pic02.jpg" alt="iPad">
+        <img class="mobile-img" src="img/pic02_mobile.jpg" alt="iPad">
+        <div class="carousel-caption">
+          <h3>iPad</h3>
+          <!-- <p>Thank you, Chicago - A night we won't forget.</p> -->
+        </div>
+      </div>
+
+      <div class="item">
+        <img class="pc-img" src="img/pic03.jpg" alt="Apple Watch">
+        <img class="mobile-img" src="img/pic03_mobile.jpg" alt="Apple Watch">
+        <div class="carousel-caption">
+          <h3>iPhone</h3>
+          <!-- <p>Even though the traffic was a mess, we had the best time.</p> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <!-- Carousel-->
+  <div class="container-fluid text-center">
+    <div class="container container-padding">
+      <h3>Unleashed</h3>
+      <p>Watch the Apple Event tomorrow a 10 a.m.PDT</p>
+      <p>learn more...</p>
+    </div>
+  </div>
+  <div class="container text-center container-padding">
+    <div class="row">
+      <div class="col-sm-12">
+        <p>New</p>
+        <p>Apple Watch</p>
+        <p>Series7</p>
+        <p>Full sreen ahead</p>
+        <p>Learn more > Buy ></p>
+      </div>
+    </div>
+  </div>
+  <div id="Store" class="container text-center container-padding">
+    <h3>Store</h3>
+    <div class="row">
+      <div class="col-sm-6 bg1" style="padding-bottom:100px;">
+        <p>New</p>
+        <p>Apple Watch</p>
+        <p>Series7</p>
+        <p>Full sreen ahead</p>
+        <p>Learn more > Buy ></p>
+      </div>
+      <div class="col-sm-6 bg2" style="padding-bottom:100px;">
+        <p>New</p>
+        <p>Apple Watch</p>
+        <p>Series7</p>
+        <p>Full sreen ahead</p>
+        <p>Learn more > Buy ></p>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center container-padding">
+    <div class="row">
+      <div class="col-sm-6" style="padding-bottom:100px;">
+        <p>New</p>
+        <p>Apple Watch</p>
+        <p>Series7</p>
+        <p>Full sreen ahead</p>
+        <p>Learn more > Buy ></p>
+      </div>
+      <div class="col-sm-6">
+        <p>New</p>
+        <p>Apple Watch</p>
+        <p>Series7</p>
+        <p>Full sreen ahead</p>
+        <p>Learn more > Buy ></p>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center container-padding">
+    <div class="row">
+      <div class="col-sm-6" style="padding-bottom:100px;">
+        <p>New</p>
+        <p>Apple Watch</p>
+        <p>Series7</p>
+        <p>Full sreen ahead</p>
+        <p>Learn more > Buy ></p>
+      </div>
+      <div class="col-sm-6">
+        <p>New</p>
+        <p>Apple Watch</p>
+        <p>Series7</p>
+        <p>Full sreen ahead</p>
+        <p>Learn more > Buy ></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container container-padding">
+    <div class="row">
+      <div class="col-sm-12">
+        1. SharePlay coming soon. An Apple Fitness+ subscription is required for all participants in a SharePlay Group
+        Workout. ​​Apple Fitness+ requires iOS 14.3 or later, iPadOS 14.3 or later, watchOS 7.2 or later, and tvOS 14.3
+        or later. To get the newest features, use Apple Fitness+ with Apple Watch Series 3 or later, with watchOS 8
+        paired with iPhone 6s or later with iOS 15, iPad with iPadOS 15, Apple TV 4K or Apple TV HD with tvOS 15.<br>
+        2. $9.99/month after free trial. No commitment. Plan automatically renews after trial until cancelled.<br>
+        To access and use all the features of Apple Card, you must add Apple Card to Wallet on an iPhone or iPad with
+        the latest version of iOS or iPadOS. Update to the latest version by going to Settings > General > Software
+        Update. Tap Download and Install.<br>
+        Available for qualifying applicants in the United States.<br>
+        Apple Card is issued by Goldman Sachs Bank USA, Salt Lake City Branch.<br>
+        Learn more about how Apple Card applications are evaluated at support.apple.com/kb/HT209218.<br>
+        Apple TV+ is $4.99/month after free trial. One subscription per Family Sharing group. Offer good for 3 months
+        after eligible device activation. Plan automatically renews until cancelled. Restrictions and other terms apply.
+      </div>
+    </div>
+  </div>
+  <!-- KakaoMap 지도를 표시할 div 입니다 -->
+  <div id="Loc" class="container text-center">
+    <h3>Apple Korea</h3>
+    <div id="map" style="width:100%;height:350px;"></div>
+  </div>
+
+
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8fe2dd86531a6844a5dfe9d9e58e8b74"></script>
+  <script>
+    var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+      mapOption = {
+        center: new kakao.maps.LatLng(37.513317215577146, 127.05980301270671), // 지도의 중심좌표
+        level: 3 // 지도의 확대 레벨
+      };
+
+    // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+    var map = new kakao.maps.Map(mapContainer, mapOption);
+
+    var markerPosition = new kakao.maps.LatLng(37.513317215577146, 127.05980301270671);
+
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+      position: markerPosition
+    });
+
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+  </script>
+  <!-- footer -->
+  <!-- desktop -->
+  <div class="container container-padding" id="pc-footer">
+    <div class="row">
+      <div class="col-sm-3">
+        <strong>Shop and Learn</strong><br>
+        Mac<br>
+        iPad<br>
+        iPhone<br>
+        Watch<br>
+        TV<br>
+        Music<br>
+        AirPods<br>
+        HomePod<br>
+        iPod touch<br>
+        AirTag<br>
+        Accessories<br>
+        Gift Cards
+      </div>
+      <div class="col-sm-3">
+        <strong>Services</strong><br>
+        Apple Music<br>
+        Apple TV+<br>
+        Apple Fitness+<br>
+        Apple News+<br>
+        Apple Arcade<br>
+        iCloud<br>
+        Apple One<br>
+        Apple Card<br>
+        Apple Books<br>
+        Apple Podcasts<br>
+        App Store<br>
+        Account<br>
+        Manage Your Apple ID<br>
+        Apple Store Account<br>
+        iCloud.com
+
+      </div>
+      <div class="col-sm-3">
+        <strong>Apple Store</strong><br>
+        Find a Store<br>
+        Shop Online<br>
+        Genius Bar<br>
+        Today at Apple<br>
+        Apple Camp<br>
+        Apple Store App<br>
+        Refurbished and Clearance<br>
+        Financing<br>
+        Apple Trade In<br>
+        Order Status<br>
+        Shopping Help
+      </div>
+      <div class="col-sm-3">
+        <strong>Apple Values</strong><br>
+        Accessibility<br>
+        Education<br>
+        Environment<br>
+        Inclusion and Diversity<br>
+        Privacy<br>
+        Racial Equity and Justice<br>
+        Supplier Responsibility<br>
+        About Apple<br>
+        Newsroom<br>
+        Apple Leadership<br>
+        Career Opportunities<br>
+        Investors<br>
+        Ethics & Compliance<br>
+        Events<br>
+        Contact Apple
+      </div>
+    </div>
+
+  </div>
+  <!-- desktop -->
+  <!-- mobile -->
+  <div id="mobile-footer" class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#mobile-footer" href="#collapse1">
+            Shop and Learn</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">
+          Mac<br>
+          iPad<br>
+          iPhone<br>
+          Watch<br>
+          TV<br>
+          Music<br>
+          AirPods<br>
+          HomePod<br>
+          iPod touch<br>
+          AirTag<br>
+          Accessories<br>
+          Gift Cards
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#mobile-footer" href="#collapse2">
+            Services</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">Apple Music<br>
+          Apple TV+<br>
+          Apple Fitness+<br>
+          Apple News+<br>
+          Apple Arcade<br>
+          iCloud<br>
+          Apple One<br>
+          Apple Card<br>
+          Apple Books<br>
+          Apple Podcasts<br>
+          App Store<br>
+          Account<br>
+          Manage Your Apple ID<br>
+          Apple Store Account<br>
+          iCloud.com</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#mobile-footer" href="#collapse3">
+            Apple Store</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">Find a Store<br>
+          Shop Online<br>
+          Genius Bar<br>
+          Today at Apple<br>
+          Apple Camp<br>
+          Apple Store App<br>
+          Refurbished and Clearance<br>
+          Financing<br>
+          Apple Trade In<br>
+          Order Status<br>
+          Shopping Help</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#mobile-footer" href="#collapse4">
+            Apple Values</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">Find a Store<br>
+          Accessibility<br>
+          Education<br>
+          Environment<br>
+          Inclusion and Diversity<br>
+          Privacy<br>
+          Racial Equity and Justice<br>
+          Supplier Responsibility<br>
+          About Apple<br>
+          Newsroom<br>
+          Apple Leadership<br>
+          Career Opportunities<br>
+          Investors<br>
+          Ethics & Compliance<br>
+          Events<br>
+          Contact Apple
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#collapse5">Collapsible panel</a>
+          </h4>
+        </div>
+        <div id="collapse5" class="panel-collapse collapse">
+          <div class="panel-body">Panel Body</div>
+          <div class="panel-footer">Panel Footer</div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- mobile -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">More ways to shop: Find an Apple Store or other retailer near you. Or call 1-800-MY-APPLE.
+        </div>
+        
+        <div class="col-sm-8">Copyright © 2021 Apple Inc. All rights reserved.Privacy | Policy | Terms of Use | Sales
+          and Refunds | Legal | Site Map</div>
+      </div>
+    </div>
+    <!-- footer -->
+  
+</body>
+
+</html>
